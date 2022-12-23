@@ -1,0 +1,12 @@
+{
+    "name": "urba-automobile-node-red",
+    "description": "Service automobile urbanization project back-end",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}

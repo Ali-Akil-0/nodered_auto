@@ -1,0 +1,1911 @@
+[
+    {
+        "id": "4f780d200cf13591",
+        "type": "tab",
+        "label": "ConducteurSecurety",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f2ba48b92125124c",
+        "type": "tab",
+        "label": "CarRoadSefety",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6a80935aeffa01cd",
+        "type": "tab",
+        "label": "CarViolence",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "eba9aeb65f0177d8",
+        "type": "tab",
+        "label": "Meteorological",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cd9284ad6f853756",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "681a0f860a64e01e",
+        "type": "ui_group",
+        "name": "dashboard 1",
+        "tab": "d48a98448950c89a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d48a98448950c89a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "53eca5afd68308f3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "52b78a0fcccf0e51",
+        "type": "deepstack-server",
+        "proto": "http",
+        "host": "localhost",
+        "port": "80",
+        "version": "v1",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "346774d5928ffcbe",
+        "type": "face-api-recognise",
+        "name": "Ronaldo"
+    },
+    {
+        "id": "f762bf1e8cd7184d",
+        "type": "debug",
+        "z": "4f780d200cf13591",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "4a82f8db35527930",
+        "type": "http in",
+        "z": "4f780d200cf13591",
+        "name": "DemandeData",
+        "url": "/data",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "9437a1600c433b12"
+            ]
+        ]
+    },
+    {
+        "id": "0273d6b924407ca5",
+        "type": "http in",
+        "z": "4f780d200cf13591",
+        "name": "demandeFréquenceCardiaqueRequest",
+        "url": "/frequenceCardiaque",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "79de55981686024a"
+            ]
+        ]
+    },
+    {
+        "id": "e08996bae1f2537b",
+        "type": "http response",
+        "z": "4f780d200cf13591",
+        "name": "demandeFréquenceCardiaqueResponse",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 720,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "79de55981686024a",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "SmartWatch",
+        "func": "\nif (!global.get(\"min\")) {\n    global.set(\"min\", 80)\n}\nif (!global.get(\"max\")) {\n    global.set(\"max\", 100)\n}\nlet fr = Math.random() * (global.get(\"max\") - global.get(\"min\")) + global.get(\"min\");\nmsg.payload = { fr: fr.toFixed(0)};\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "e08996bae1f2537b"
+            ]
+        ]
+    },
+    {
+        "id": "9437a1600c433b12",
+        "type": "http request",
+        "z": "4f780d200cf13591",
+        "name": "getFréquenceCardiaqueRequest",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/frequenceCardiaque",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "0359cc9c25d4cb6d"
+            ]
+        ]
+    },
+    {
+        "id": "0359cc9c25d4cb6d",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "AnalyseFrCardiaque",
+        "func": "let status;\nlet fr = JSON.parse(msg.payload).fr;\nif (fr >= 80 && fr < 120) {\n    status = 'normale';\n    if (global.get('NbrDrowsiness') == 3) {\n        global.set('NbrDrowsiness', 0);\n    }\n}\nelse if (fr >= 60 && fr < 80) {\n    status = 'somnolent';\n} else if (fr < 60 && fr >= 120) {\n    status = 'malade';\n}\n\n\nglobal.set(\"status\", status);\nglobal.set(\"fr\", fr);\n\nmsg.payload = { fr :fr,\n                status : status};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "4ea93475d3a94d96"
+            ]
+        ]
+    },
+    {
+        "id": "4ea93475d3a94d96",
+        "type": "switch",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "property": "status",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "normale",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "somnolent",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 220,
+        "wires": [
+            [
+                "70df529a5c6dca17"
+            ],
+            [
+                "3b4d8d2ec1b68232"
+            ]
+        ]
+    },
+    {
+        "id": "6685f4d5fc2f0b9e",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "AnalyseDrowsiness",
+        "func": "let drowsiness = JSON.parse(msg.payload).drowsiness;\n\nlet status = global.get(\"status\")\nlet fr = global.get(\"fr\")\n//let alerte = global.get(\"alerte\")\nif (drowsiness=='no') {\n    if (global.get('NbrDrowsiness') == 3) {\n        global.set('NbrDrowsiness', 0);\n    }\n}\nglobal.set('drowsiness', drowsiness);\n\nmsg.payload = {\n    fr: fr,\n    status: status,\n    drowsiness: drowsiness,\n    alerte:\"Beware, you may feel sleepy\"\n\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 320,
+        "wires": [
+            [
+                "17d08d3161146c0d",
+                "9fdde5974512edcd"
+            ]
+        ]
+    },
+    {
+        "id": "17d08d3161146c0d",
+        "type": "debug",
+        "z": "4f780d200cf13591",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "05216f16be9c599f",
+        "type": "http in",
+        "z": "4f780d200cf13591",
+        "name": "demandeDrowsinessDetectionRequest",
+        "url": "/drowsinessdetection",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "aacbca28ff66b28b"
+            ]
+        ]
+    },
+    {
+        "id": "79e649e6b655f561",
+        "type": "http response",
+        "z": "4f780d200cf13591",
+        "name": "demandeDrowsinessDetectionResponse",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "22f1db0ebae202c2",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "Drowsiness Sensor",
+        "func": "\nif(!global.get(\"d\")){\n    global.set(\"d\", 'no')\n}\n//msg.payload = { drowsiness: 'no' };\nmsg.payload = { drowsiness: global.get(\"d\") };\nmsg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 420,
+        "wires": [
+            [
+                "79e649e6b655f561"
+            ]
+        ]
+    },
+    {
+        "id": "3b4d8d2ec1b68232",
+        "type": "http request",
+        "z": "4f780d200cf13591",
+        "name": "getDrowsinessDetectionRequest",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/drowsinessdetection",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "6685f4d5fc2f0b9e"
+            ]
+        ]
+    },
+    {
+        "id": "aacbca28ff66b28b",
+        "type": "delay",
+        "z": "4f780d200cf13591",
+        "name": "Recording",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "22f1db0ebae202c2"
+            ]
+        ]
+    },
+    {
+        "id": "9fdde5974512edcd",
+        "type": "switch",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "property": "drowsiness",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "no",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "yes",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1410,
+        "y": 320,
+        "wires": [
+            [
+                "70df529a5c6dca17"
+            ],
+            [
+                "f31b24a80c6114b3"
+            ]
+        ]
+    },
+    {
+        "id": "f31b24a80c6114b3",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "DrowsinessDetected",
+        "func": "msg.payload.drowsinessAlerte =\"sleep risk ( warning tone) !!!!\"\nif (!global.get('NbrDrowsiness')){\n    global.set('NbrDrowsiness',1);\n}\nmsg.payload.NbrDrowsiness = global.get('NbrDrowsiness');\nif (global.get('NbrDrowsiness')!=3) {\n    global.set('NbrDrowsiness', global.get('NbrDrowsiness') + 1);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1620,
+        "y": 340,
+        "wires": [
+            [
+                "f762bf1e8cd7184d",
+                "a0e56c2c511df6a8"
+            ]
+        ]
+    },
+    {
+        "id": "70df529a5c6dca17",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "prepareHttpResponse",
+        "func": "msg.headers = {};\nmsg.headers['content-type'] = 'application/json';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2320,
+        "y": 200,
+        "wires": [
+            [
+                "6a369fb209538cc8"
+            ]
+        ]
+    },
+    {
+        "id": "6a369fb209538cc8",
+        "type": "http response",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 2500,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a154afbdd721998f",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "Automatic Emergency Braking",
+        "func": "msg.payload.NbrDrowsinessAlerte =\"Automatic Emergency Braking !!!\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 380,
+        "wires": [
+            [
+                "70df529a5c6dca17"
+            ]
+        ]
+    },
+    {
+        "id": "a0e56c2c511df6a8",
+        "type": "switch",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "property": "payload.NbrDrowsiness",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1810,
+        "y": 340,
+        "wires": [
+            [
+                "70df529a5c6dca17"
+            ],
+            [
+                "a154afbdd721998f"
+            ]
+        ]
+    },
+    {
+        "id": "868908474943c0e4",
+        "type": "http in",
+        "z": "4f780d200cf13591",
+        "name": "Change Max&Min pulsation and Drowsiness",
+        "url": "/change",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "462795bf558aeec3"
+            ]
+        ]
+    },
+    {
+        "id": "462795bf558aeec3",
+        "type": "json",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "da71e3eb9c47fa9d",
+                "e81a7280c1c058fb"
+            ]
+        ]
+    },
+    {
+        "id": "82c79a475e41a4c2",
+        "type": "debug",
+        "z": "4f780d200cf13591",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "da71e3eb9c47fa9d",
+        "type": "http response",
+        "z": "4f780d200cf13591",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "e81a7280c1c058fb",
+        "type": "function",
+        "z": "4f780d200cf13591",
+        "name": "get values",
+        "func": "let min = JSON.parse(msg.payload).min;\nlet max = JSON.parse(msg.payload).max;\nlet d = JSON.parse(msg.payload).d;\n\n\nmsg.payload = {\n    min: parseInt(min) ,\n    max: parseInt(max) ,\n   d: d ,\n};\nglobal.set(\"min\", parseInt(min) );\nglobal.set(\"max\", parseInt(max) )\nglobal.set(\"d\", d)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "82c79a475e41a4c2"
+            ]
+        ]
+    },
+    {
+        "id": "2b7a9cce341e5e8d",
+        "type": "http in",
+        "z": "f2ba48b92125124c",
+        "name": "CheckRoadSafety",
+        "url": "/CheckRoadSafety",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "f0c7d68ec54afe9e",
+                "2e56c5e1f6baa72d"
+            ]
+        ]
+    },
+    {
+        "id": "d09a28167ddf9114",
+        "type": "http response",
+        "z": "f2ba48b92125124c",
+        "name": "SendBlindSpotDanger",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 500,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "242650e70317fa42",
+        "type": "template",
+        "z": "f2ba48b92125124c",
+        "name": "UnsafeBlindSpot",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"Road\" : \"Unsafe\",\n    \"Message\" : \"There is a car in Blind Spot\"\n}",
+        "output": "str",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "d09a28167ddf9114"
+            ]
+        ]
+    },
+    {
+        "id": "f0c7d68ec54afe9e",
+        "type": "function",
+        "z": "f2ba48b92125124c",
+        "name": "BlindSpotSensor",
+        "func": "//msg.number=Math.round(Math.random())\nif (!global.get(\"b\")) {\n    global.set(\"b\", 0)\n}\nmsg.number = global.get(\"b\");\nreturn msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "89c1085d2f073b99"
+            ]
+        ]
+    },
+    {
+        "id": "2e56c5e1f6baa72d",
+        "type": "function",
+        "z": "f2ba48b92125124c",
+        "name": "FrontRoadSensor",
+        "func": "//msg.number1 = Math.round(Math.random())\nif (!global.get(\"f\")) {\n    global.set(\"f\", 0)\n}\nmsg.number1 = global.get(\"f\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "a581629eeb15284c"
+            ]
+        ]
+    },
+    {
+        "id": "81d6fc4d19ee71fe",
+        "type": "template",
+        "z": "f2ba48b92125124c",
+        "name": "UnsafeFrontRoad",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"Road\" : \"Unsafe\",\n    \"Message\" : \"Road unsafe there is a car in front of you\"\n}",
+        "output": "str",
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "8aa9c602d2106087"
+            ]
+        ]
+    },
+    {
+        "id": "8aa9c602d2106087",
+        "type": "http response",
+        "z": "f2ba48b92125124c",
+        "name": "SendFrontRoadDanger",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "68395facae25a7bc",
+        "type": "function",
+        "z": "f2ba48b92125124c",
+        "name": "BlindSpot&FrontRoad",
+        "func": "if(msg.number1 ==0 && msg.number==0)\nmsg.safe=7;\nelse\nmsg.safe=8;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "ec28e66b9a831c55"
+            ]
+        ]
+    },
+    {
+        "id": "ec28e66b9a831c55",
+        "type": "template",
+        "z": "f2ba48b92125124c",
+        "name": "PassingIsSafe",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"Road\" : \"Safe\",\n    \"Message\" : \"Road is safe you can pass\"\n}",
+        "output": "str",
+        "x": 720,
+        "y": 560,
+        "wires": [
+            [
+                "ab173fa042504dc3"
+            ]
+        ]
+    },
+    {
+        "id": "ab173fa042504dc3",
+        "type": "http response",
+        "z": "f2ba48b92125124c",
+        "name": "SendRoadIsSafe",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a581629eeb15284c",
+        "type": "switch",
+        "z": "f2ba48b92125124c",
+        "name": "",
+        "property": "number1",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "68395facae25a7bc"
+            ],
+            [
+                "81d6fc4d19ee71fe"
+            ]
+        ]
+    },
+    {
+        "id": "89c1085d2f073b99",
+        "type": "switch",
+        "z": "f2ba48b92125124c",
+        "name": "",
+        "property": "number",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "242650e70317fa42"
+            ],
+            [
+                "68395facae25a7bc"
+            ]
+        ]
+    },
+    {
+        "id": "36abc7fdbc75fecf",
+        "type": "http in",
+        "z": "f2ba48b92125124c",
+        "name": "Change Front&Back sensors value",
+        "url": "/changeroadsafety",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 840,
+        "wires": [
+            [
+                "3a10c74e4c01bee2"
+            ]
+        ]
+    },
+    {
+        "id": "3a10c74e4c01bee2",
+        "type": "json",
+        "z": "f2ba48b92125124c",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "5cfabc40b3a11eab",
+                "119191b4a3f52d06"
+            ]
+        ]
+    },
+    {
+        "id": "62d9e24ef56758b7",
+        "type": "debug",
+        "z": "f2ba48b92125124c",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "5cfabc40b3a11eab",
+        "type": "http response",
+        "z": "f2ba48b92125124c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "119191b4a3f52d06",
+        "type": "function",
+        "z": "f2ba48b92125124c",
+        "name": "get values",
+        "func": "let f = JSON.parse(msg.payload).f;\nlet b = JSON.parse(msg.payload).b;\n\n\nmsg.payload = {\n    f:f,\n    b:b\n};\nglobal.set(\"f\", parseInt(f) );\nglobal.set(\"b\", parseInt(b) )\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 840,
+        "wires": [
+            [
+                "62d9e24ef56758b7"
+            ]
+        ]
+    },
+    {
+        "id": "8efc8ea7e9a484ba",
+        "type": "http in",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "url": "/CheckViolenceAct/:force/:time",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "657d8cbe2787b551"
+            ]
+        ]
+    },
+    {
+        "id": "93d33643a73b0dc0",
+        "type": "switch",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "property": "time",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "115639eef88deaa6"
+            ],
+            [
+                "3f771e93e1cd20fb"
+            ]
+        ]
+    },
+    {
+        "id": "3ad2121d6dda53ae",
+        "type": "template",
+        "z": "6a80935aeffa01cd",
+        "name": "NormalActivity",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"activity\" : \"normal\"\n}",
+        "output": "str",
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "38743aa668db9a57"
+            ]
+        ]
+    },
+    {
+        "id": "38743aa668db9a57",
+        "type": "http response",
+        "z": "6a80935aeffa01cd",
+        "name": "SendNormalActivityResponse",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "657d8cbe2787b551",
+        "type": "function",
+        "z": "6a80935aeffa01cd",
+        "name": "Int2String",
+        "func": "const force=msg.req.params.force;\nmsg.force = parseInt(force);\nconst time = msg.req.params.time;\nmsg.time = parseInt(time);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "93d33643a73b0dc0"
+            ]
+        ]
+    },
+    {
+        "id": "f2ecc16b23256a67",
+        "type": "template",
+        "z": "6a80935aeffa01cd",
+        "name": "AnormalActivity",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"activity\" : \"anormal\"\n}",
+        "output": "str",
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "877982fd5e4fade0"
+            ]
+        ]
+    },
+    {
+        "id": "877982fd5e4fade0",
+        "type": "http response",
+        "z": "6a80935aeffa01cd",
+        "name": "SendAnormalActivityResponse",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "115639eef88deaa6",
+        "type": "switch",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "property": "force",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "3ad2121d6dda53ae"
+            ],
+            [
+                "f2ecc16b23256a67"
+            ]
+        ]
+    },
+    {
+        "id": "3f771e93e1cd20fb",
+        "type": "switch",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "property": "force",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "9ca6b520f5bbdc93"
+            ],
+            [
+                "8d5468b1972f5049",
+                "75f7d39c8dd2243b"
+            ]
+        ]
+    },
+    {
+        "id": "a3e581bbd83482e2",
+        "type": "http response",
+        "z": "6a80935aeffa01cd",
+        "name": "SendBackToNormalResponse",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8d5468b1972f5049",
+        "type": "template",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"activity\" : \"Still in danger\"\n}",
+        "output": "str",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "a43470d3ce530b1e"
+            ]
+        ]
+    },
+    {
+        "id": "a43470d3ce530b1e",
+        "type": "http response",
+        "z": "6a80935aeffa01cd",
+        "name": "DangerStilExist",
+        "statusCode": "",
+        "headers": {},
+        "x": 700,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9ca6b520f5bbdc93",
+        "type": "template",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"activity\" : \"Back to Safety\"\n}",
+        "output": "str",
+        "x": 780,
+        "y": 340,
+        "wires": [
+            [
+                "a3e581bbd83482e2"
+            ]
+        ]
+    },
+    {
+        "id": "981ffc132007207f",
+        "type": "e-mail",
+        "z": "6a80935aeffa01cd",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "hamza.elghibari@gmail.com",
+        "dname": "",
+        "x": 520,
+        "y": 560,
+        "wires": [],
+        "info": "hello there is an anormal activity here"
+    },
+    {
+        "id": "75f7d39c8dd2243b",
+        "type": "template",
+        "z": "6a80935aeffa01cd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "there is a danger over here\n",
+        "output": "str",
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "981ffc132007207f"
+            ]
+        ]
+    },
+    {
+        "id": "8f61e240cb470a03",
+        "type": "http in",
+        "z": "eba9aeb65f0177d8",
+        "name": "Meteorological Info Request",
+        "url": "/MeteorologicalState",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 440,
+        "wires": [
+            [
+                "a98a42b781690af0",
+                "5c6266c71b13706b",
+                "ec6ded349875d842",
+                "f73726271529c262",
+                "cab171363a2aa42b"
+            ]
+        ]
+    },
+    {
+        "id": "a98a42b781690af0",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Précipitation sensor",
+        "func": "let PrecValue = Math.floor(Math.random() * 120);\nlet PrecStatus = \"\"  ; \nlet EssueGlaces = \"NonActiver\"; \nlet Toit  = \"NonFermer\"; \nlet FeuxDeBrouillard = \"NonActiver\" ; \nlet FenetrePassager = \"NonActiver\"; \nlet ModeAirFrais = \"NonActiver\" ; \nmsg.payload.PrecValue = PrecValue; \nmsg.payload.PrecStatus = PrecStatus; \nmsg.payload.EssueGlaces = EssueGlaces; \nmsg.payload.Toit = Toit; \nmsg.payload.FeuxDeBrouillard = FeuxDeBrouillard; \nmsg.payload.FenetrePassager = FenetrePassager; \nmsg.payload.ModeAirFrais = ModeAirFrais; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 380,
+        "wires": [
+            [
+                "6343f85b6c4bd38a"
+            ]
+        ]
+    },
+    {
+        "id": "5c6266c71b13706b",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Visibité sensor",
+        "func": "var VisibleValue = Math.floor(Math.random() * 500);\nvar VisibleStatus =\"\"  ; \nvar FeuxDeRoute = \"NonActiver\"; \nmsg.payload.VisibleValue = VisibleValue; \nmsg.payload.VisibleStatus = VisibleStatus; \nmsg.payload.FeuxDeRoute = FeuxDeRoute; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 480,
+        "wires": [
+            [
+                "e3c1a59f9c423775"
+            ]
+        ]
+    },
+    {
+        "id": "ec6ded349875d842",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Température intérieur sensor",
+        "func": "var TempValue = Math.floor(Math.random() * 40);\nvar TempStatus = \"\";\nvar Climatiseur = \"NonActiver\";\nvar ClimatiseurNiveau = \"\";\nvar ChauffageDeSieges = \"NonActiver\"\nmsg.payload.TempValue = TempValue ; \nmsg.payload.TempStatus = TempStatus; \nmsg.payload.Climatiseur = Climatiseur; \nmsg.payload.ClimatiseurNiveau = ClimatiseurNiveau; \nmsg.payload.ChauffageDeSieges = ChauffageDeSieges; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "b93fd8437c841460"
+            ]
+        ]
+    },
+    {
+        "id": "cab171363a2aa42b",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Neige sensor",
+        "func": "let NeigeValue = Math.floor(Math.random());\nlet NeigeStatus = \"\";\nlet Chauffagepoigneporte = \"NonActiver\";\nlet ChauffageEssueGlaces = \"NonActiver\";\nlet ChauffageCoffres = \"NonActiver\";\n\nmsg.payload.NeigeValue = NeigeValue; \nmsg.payload.NeigeStatus = NeigeStatus;\nmsg.payload.Chauffagepoigneporte = Chauffagepoigneporte; \nmsg.payload.ChauffageEssueGlaces = ChauffageEssueGlaces; \nmsg.payload.ChauffageCoffres = ChauffageCoffres; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "e266fe741cce9c56"
+            ]
+        ]
+    },
+    {
+        "id": "f73726271529c262",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Vent sensor",
+        "func": "let VendValue = Math.floor(Math.random() * 150);\nlet VendStatus = \"\";\nlet TurbineEolienne = \"NonActiver\"\nmsg.payload.VendValue = VendValue ; \nmsg.payload.VendStatus = VendStatus; \nmsg.payload.TurbineEolienne = TurbineEolienne; \nreturn msg ; ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 680,
+        "wires": [
+            [
+                "e7191535fb631dad"
+            ]
+        ]
+    },
+    {
+        "id": "6343f85b6c4bd38a",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Précipitation Switch",
+        "property": "payload.PrecValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "50",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "9b18f0f6d934d859"
+            ],
+            [
+                "58205c17c43be091"
+            ]
+        ]
+    },
+    {
+        "id": "e3c1a59f9c423775",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Visibilité Switch",
+        "property": "payload.VisibleValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 780,
+        "y": 480,
+        "wires": [
+            [
+                "b925e8e6f3fb5637"
+            ],
+            [
+                "6a14f5071d901723"
+            ]
+        ]
+    },
+    {
+        "id": "b93fd8437c841460",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Température Switch",
+        "property": "payload.TempValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "18",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "18",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 580,
+        "wires": [
+            [
+                "6841067f6a316a45"
+            ],
+            [
+                "f85eb1a2a6a87d53"
+            ]
+        ]
+    },
+    {
+        "id": "e7191535fb631dad",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Vent Switch",
+        "property": "payload.VendValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "90",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "90",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 680,
+        "wires": [
+            [
+                "1393512422626397"
+            ],
+            [
+                "70582e2e6b63436e"
+            ]
+        ]
+    },
+    {
+        "id": "e266fe741cce9c56",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Neige Switch",
+        "property": "payload.NeigeValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "0.5",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0.5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 780,
+        "wires": [
+            [
+                "e55cb92b693fb658"
+            ],
+            [
+                "7caa9b9e46c19074"
+            ]
+        ]
+    },
+    {
+        "id": "9b18f0f6d934d859",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Précipitation forte",
+        "func": "msg.payload.PrecStatus = \"Forte\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 360,
+        "wires": [
+            [
+                "df875975bc3319b0",
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "58205c17c43be091",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Précipitation faible",
+        "func": "msg.payload.PrecStatus = \"Faible\"; \nmsg.payload.EssueGlaces = \"Activer\";\nmsg.payload.Toit = \"Activer\";\nmsg.payload.FeuxDeBrouillard = \"NonActiver\";\nmsg.payload.FenetrePassager = \"NonActiver\";\nmsg.payload.ModeAirFrais = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 400,
+        "wires": [
+            [
+                "e492bc824bec4057",
+                "df875975bc3319b0"
+            ]
+        ]
+    },
+    {
+        "id": "b925e8e6f3fb5637",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Visibilité a 100m",
+        "func": "msg.payload.VisibleStatus = \"Visibilité a 100m\"; \nmsg.payload.FeuxDeRoute = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 460,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "6a14f5071d901723",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Problemes de visibilité",
+        "func": "msg.payload.VisibleStatus = \"Probleme de visibilité\";\nmsg.payload.FeuxDeRoute = \"Activer\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 500,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "6841067f6a316a45",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Température entre 0 a 18",
+        "func": "msg.payload.TempStatus = \"Température entre 0 et 18\"; \nmsg.payload.Climatiseur = \"Activer\";\nmsg.payload.ClimatiseurNiveau = \"haut\";\nmsg.payload.ChauffageDeSieges = \"Activer\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 560,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "f85eb1a2a6a87d53",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Température sup a 23",
+        "func": "msg.payload.TempStatus = \"Température supérieur a 18\"; \nmsg.payload.Climatiseur = \"Activer\";\nmsg.payload.ClimatiseurNiveau = \"bas\";\nmsg.payload.ChauffageDeSieges = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 600,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "1393512422626397",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Vitesse de vent forte",
+        "func": "msg.payload.VendStatus = \"Vitesse de vent forte\"; \nmsg.payload.TurbineEolienne = \"Activer\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 660,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "70582e2e6b63436e",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Vitesse de vent faible",
+        "func": "msg.payload.VendStatus = \"Vitesse de vent faible\"; \nmsg.payload.TurbineEolienne = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 700,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "e55cb92b693fb658",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Neige détecté",
+        "func": "msg.payload.NeigeStatus = \"Neige détecté\"; \nmsg.payload.Chauffagepoigneporte = \"Activer\";\nmsg.payload.ChauffageEssueGlaces = \"Activer\";\nmsg.payload.ChauffageCoffres = \"Activer\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 760,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "7caa9b9e46c19074",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Neige non détecté",
+        "func": "msg.payload.NeigeStatus = \"Pas de neige\"; \nmsg.payload.Chauffagepoigneporte = \"NonActiver\";\nmsg.payload.ChauffageEssueGlaces = \"NonActiver\";\nmsg.payload.ChauffageCoffres = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 800,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "df875975bc3319b0",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "Caméra de fenetre",
+        "func": "let FenetreCamValue = Math.floor(Math.random());\nlet FenetreCamStatus =\"\";\nmsg.payload.FenetreCamValue = FenetreCamValue; \nmsg.payload.FenetreCamStatus = FenetreCamStatus; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "41d5f0555dec01d9"
+            ]
+        ]
+    },
+    {
+        "id": "41d5f0555dec01d9",
+        "type": "switch",
+        "z": "eba9aeb65f0177d8",
+        "name": "Camera Switch",
+        "property": "payload.FenetreCamValue",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "0.5",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0.5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 280,
+        "wires": [
+            [
+                "0dc35cb8b14b94f7"
+            ],
+            [
+                "4af64a9c4a0bd894"
+            ]
+        ]
+    },
+    {
+        "id": "0dc35cb8b14b94f7",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "fenetre non bloqué",
+        "func": "msg.payload.FenetreCamStatus = \"Fenetre non bloqué\"; \nmsg.payload.EssueGlaces = \"Activer\";\nmsg.payload.Toit = \"Activer\";\nmsg.payload.FeuxDeBrouillard = \"Activer\";\nmsg.payload.FenetrePassager = \"Activer\";\nmsg.payload.ModeAirFrais = \"Activer\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 260,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "4af64a9c4a0bd894",
+        "type": "function",
+        "z": "eba9aeb65f0177d8",
+        "name": "fenetre bloqué",
+        "func": "msg.payload.FenetreCamStatus = \"Fenetre bloqué\"; \nmsg.payload.EssueGlaces = \"Activer\";\nmsg.payload.Toit = \"Activer\";\nmsg.payload.FeuxDeBrouillard = \"Activer\";\nmsg.payload.FenetrePassager = \"NonActiver\";\nmsg.payload.ModeAirFrais = \"NonActiver\"; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            [
+                "e492bc824bec4057"
+            ]
+        ]
+    },
+    {
+        "id": "e492bc824bec4057",
+        "type": "join",
+        "z": "eba9aeb65f0177d8",
+        "name": "Join ",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "22",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1310,
+        "y": 620,
+        "wires": [
+            [
+                "e0f7b5b9409634ba"
+            ]
+        ]
+    },
+    {
+        "id": "e0f7b5b9409634ba",
+        "type": "template",
+        "z": "eba9aeb65f0177d8",
+        "name": "JSON Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"PrecValue\":\"{{payload.PrecValue}}\",\n    \"PrecStatus\": \"{{payload.PrecStatus}}\",\n    \"VisibleValue\":\"{{payload.VisibleValue}}\",\n    \"VisibleStatus\": \"{{payload.VisibleStatus}}\",\n    \"TempValue\":\"{{payload.TempValue}}\",\n    \"TempStatus\": \"{{payload.TempStatus}}\",\n    \"VendValue\": \"{{payload.VendValue}}\",\n    \"VendStatus\": \"{{payload.VendStatus}}\",\n    \"NeigeValue\": \"{{payload.NeigeValue}}\",\n    \"EssueGlaces\": \"{{payload.EssueGlaces}}\",\n    \"Toit\": \"{{payload.Toit}}\",\n    \"FeuxDeBrouillard\": \"{{payload.NeigeStatus}}\",\n    \"FenetrePassager\": \"{{payload.FenetrePassager}}\",\n    \"ModeAirFrais\": \"{{payload.ModeAirFrais}}\",\n    \"FeuxDeRoute\": \"{{payload.FeuxDeRoute}}\",\n    \"Climatiseur\": \"{{payload.Climatiseur}}\",\n    \"ClimatiseurNiveau\": \"{{payload.ClimatiseurNiveau}}\",\n    \"ChauffageDeSieges\": \"{{payload.ChauffageDeSieges}}\",\n    \"TurbineEolienne\": \"{{payload.TurbineEolienne}}\",\n    \"Chauffagepoigneporte\": \"{{payload.Chauffagepoigneporte}}\",\n    \"ChauffageEssueGlaces\": \"{{payload.ChauffageEssueGlaces}}\",\n    \"ChauffageCoffres\": \"{{payload.ChauffageCoffres}}\",\n    \"NeigeStatus\": \"{{payload.NeigeStatus}}\",\n    \"FenetreCamStatus\": \"{{payload.FenetreCamStatus}}\"\n}\n\n",
+        "output": "str",
+        "x": 1520,
+        "y": 480,
+        "wires": [
+            [
+                "8f836b2df9aa7d29"
+            ]
+        ]
+    },
+    {
+        "id": "8f836b2df9aa7d29",
+        "type": "http response",
+        "z": "eba9aeb65f0177d8",
+        "name": "HTTP Response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1760,
+        "y": 480,
+        "wires": []
+    }
+]
